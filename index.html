@@ -203,6 +203,36 @@ main>section.section.on>.wrap{width:100%}
 .footnav a{color:#C9D0F5;text-decoration:none;font-size:.9rem;font-weight:600}
 .footnav a:hover{color:#fff}
 .hero{min-height:auto!important}
+
+/* product pages */
+a.card{display:flex;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+a.card:hover{transform:translateY(-4px);box-shadow:0 2px 0 rgba(26,35,80,.06),0 24px 44px -18px rgba(26,35,80,.38)}
+.more-link{display:block;margin-top:12px;font-weight:800;font-size:.9rem;color:var(--coral)}
+.backlink{display:inline-block;font-weight:700;font-size:.9rem;text-decoration:none;color:var(--muted);margin-bottom:22px}
+.backlink:hover{color:var(--navy)}
+.phead{display:flex;gap:22px;align-items:flex-start}
+.phead .num{width:72px;height:72px;border-radius:22px;flex-shrink:0;display:grid;place-items:center}
+.phead .num svg{width:36px;height:36px}
+@media (max-width:600px){.phead{flex-direction:column;gap:14px}}
+.goodfor{display:inline-block;font-weight:700;font-size:.9rem;background:#EEF2FF;color:var(--blue-d);padding:8px 14px;border-radius:999px}
+.k-blue{background:var(--blue)}.k-coral{background:var(--coral)}.k-yellow{background:var(--yellow);color:var(--navy)}.k-teal{background:var(--teal)}
+.k-purple{background:var(--purple)}.k-green{background:var(--green)}.k-orange{background:var(--orange)}.k-red{background:var(--red)}
+.subhead{margin-top:52px}
+.subhead h3{font-size:1.5rem;margin-bottom:.2em}
+.subhead p{color:var(--muted);margin:0}
+.subhead+.cards{margin-top:20px}
+.tick{margin:8px 0 0;padding:0;list-style:none}
+.tick li{padding:7px 0 7px 30px;position:relative;color:var(--ink);font-weight:500;border-bottom:1px dashed #E4E7F2}
+.tick li:last-child{border-bottom:0}
+.tick li::before{content:"";position:absolute;left:4px;top:13px;width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px #FFF1C7}
+.feature{display:flex;align-items:center;gap:24px;justify-content:space-between;background:#fff;border-radius:var(--r);padding:26px 26px;box-shadow:var(--shadow);border-left:10px solid var(--blue);margin-top:20px}
+.feature.t-yellow{border-left-color:var(--yellow)}.feature.t-teal{border-left-color:var(--teal)}.feature.t-purple{border-left-color:var(--purple)}
+.feature h3{font-size:1.35rem}.feature p{margin:0;color:var(--muted)}
+@media (max-width:700px){.feature{flex-direction:column;align-items:flex-start}}
+.product .topics{justify-content:flex-start;margin-top:18px}
+.note{margin:34px 0 0;font-weight:700;color:var(--navy)}
+.pcta{margin-top:26px}
+.product{background:var(--cream)!important}
 footer{background:#10163A;color:#C9D0F5;padding:46px 0 34px;text-align:center}
 footer img{width:96px;margin:0 auto 12px}
 footer .name{font-weight:900;color:#fff;font-size:1.25rem}
@@ -225,7 +255,17 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
         <li><a href="#home">Home</a></li>
         <li><a href="#who">About</a></li>
         <li><a href="#benefits">How we help</a></li>
-        <li><a href="#offerings">What we make</a></li>
+        <li class="more"><details><summary>What we make</summary><div class="drop">
+          <a href="#offerings">Everything we make</a>
+          <a href="#storybooks">Storybooks</a>
+          <a href="#videos">Short video lessons</a>
+          <a href="#games">Games</a>
+          <a href="#apps">Apps</a>
+          <a href="#heroes">Real life heroes</a>
+          <a href="#printables">Printables</a>
+          <a href="#classroom">Classroom resources</a>
+          <a href="#conversation">Conversation starters</a>
+        </div></details></li>
         <li><a href="#approach">How it works</a></li>
         <li class="more"><details><summary>Our story</summary><div class="drop">
           <a href="#mission">Why we do this</a>
@@ -326,14 +366,14 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
       <p class="lede">Every story connects to more ways to learn, so kids can pick what they love and keep going.</p>
     </div>
     <div class="cards c4 offers">
-      <div class="card offer t-blue"><div class="num b-blue" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c3-1 5-1 8 1v14c-3-2-5-2-8-1z"/><path d="M20 5c-3-1-5-1-8 1v14c3-2 5-2 8-1z"/></svg></div><h3>Storybooks</h3><p>Picture books about the things kids really go through, like making friends, feeling nervous, and being brave, plus science, history, and more.</p><p class="for">Good for bedtime, story time, and the library</p></div>
-      <div class="card offer t-coral"><div class="num b-coral" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg></div><h3>Short video lessons</h3><p>Quick, friendly videos about letters, numbers, animals, science, and getting along with others.</p><p class="for">Good for little learners and classroom screens</p></div>
-      <div class="card offer t-yellow"><div class="num b-yellow" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A2350" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div><h3>Games</h3><p>Fun games, like the Cool Kids Chess Club, where kids practice thinking ahead, staying focused, and solving problems.</p><p class="for">Good for playing solo or as a family</p></div>
-      <div class="card offer t-teal"><div class="num b-teal" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></div><h3>Apps</h3><p>Kid friendly tools, like a talk buddy app that helps kids think through friendships, homework, and big feelings.</p><p class="for">Good for everyday ups and downs</p></div>
-      <div class="card offer t-purple"><div class="num b-purple" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div><h3>Real life heroes</h3><p>Short, kid sized stories about inspiring people from all kinds of backgrounds, including leaders, inventors, artists, and everyday changemakers.</p><p class="for">Good for any day of the year</p></div>
-      <div class="card offer t-green"><div class="num b-green" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></div><h3>Printables</h3><p>Activity pages and workbooks you can print at home or in the classroom.</p><p class="for">Good for weekends, summer, and quiet time</p></div>
-      <div class="card offer t-orange"><div class="num b-orange" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h6M7 12h4"/></svg></div><h3>Classroom resources</h3><p>Slideshows, lesson guides, and discussion questions teachers can use right away.</p><p class="for">Good for teachers, homeschool, and after school</p></div>
-      <div class="card offer t-red"><div class="num b-red" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Conversation starters</h3><p>Simple questions that help grownups talk with kids about feelings, kindness, and what they’re learning.</p><p class="for">Good for parents, grandparents, and caregivers</p></div>
+      <a href="#storybooks" class="card offer t-blue"><div class="num b-blue" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c3-1 5-1 8 1v14c-3-2-5-2-8-1z"/><path d="M20 5c-3-1-5-1-8 1v14c3-2 5-2 8-1z"/></svg></div><h3>Storybooks</h3><p>Picture books about the things kids really go through, like making friends, feeling nervous, and being brave, plus science, history, and more.</p><p class="for">Good for bedtime, story time, and the library</p><span class="more-link">Learn more →</span></a>
+      <a href="#videos" class="card offer t-coral"><div class="num b-coral" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg></div><h3>Short video lessons</h3><p>Quick, friendly videos about letters, numbers, animals, science, and getting along with others.</p><p class="for">Good for little learners and classroom screens</p><span class="more-link">Learn more →</span></a>
+      <a href="#games" class="card offer t-yellow"><div class="num b-yellow" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A2350" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div><h3>Games</h3><p>Fun games, like the Cool Kids Chess Club, where kids practice thinking ahead, staying focused, and solving problems.</p><p class="for">Good for playing solo or as a family</p><span class="more-link">Learn more →</span></a>
+      <a href="#apps" class="card offer t-teal"><div class="num b-teal" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></div><h3>Apps</h3><p>Kid friendly tools, like a talk buddy app that helps kids think through friendships, homework, and big feelings.</p><p class="for">Good for everyday ups and downs</p><span class="more-link">Learn more →</span></a>
+      <a href="#heroes" class="card offer t-purple"><div class="num b-purple" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div><h3>Real life heroes</h3><p>Short, kid sized stories about inspiring people from all kinds of backgrounds, including leaders, inventors, artists, and everyday changemakers.</p><p class="for">Good for any day of the year</p><span class="more-link">Learn more →</span></a>
+      <a href="#printables" class="card offer t-green"><div class="num b-green" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></div><h3>Printables</h3><p>Activity pages and workbooks you can print at home or in the classroom.</p><p class="for">Good for weekends, summer, and quiet time</p><span class="more-link">Learn more →</span></a>
+      <a href="#classroom" class="card offer t-orange"><div class="num b-orange" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h6M7 12h4"/></svg></div><h3>Classroom resources</h3><p>Slideshows, lesson guides, and discussion questions teachers can use right away.</p><p class="for">Good for teachers, homeschool, and after school</p><span class="more-link">Learn more →</span></a>
+      <a href="#conversation" class="card offer t-red"><div class="num b-red" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Conversation starters</h3><p>Simple questions that help grownups talk with kids about feelings, kindness, and what they’re learning.</p><p class="for">Good for parents, grandparents, and caregivers</p><span class="more-link">Learn more →</span></a>
     </div>
     <div class="btns" style="justify-content:center"><a class="btn btn-b" href="#connect">Hear when new things come out</a></div>
   </div>
@@ -471,6 +511,259 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
   </div>
 </section>
 
+<!-- Product: storybooks -->
+<section class="section product s-white" id="storybooks">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-blue" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c3-1 5-1 8 1v14c-3-2-5-2-8-1z"/><path d="M20 5c-3-1-5-1-8 1v14c3-2 5-2 8-1z"/></svg></div>
+      <div>
+        <span class="kicker k-blue">Storybooks</span>
+        <h2>Stories about real kid life.</h2>
+        <p class="lede">Picture books about the things kids really go through, like making friends, feeling nervous, and being brave, plus science, history, and more.</p>
+        <span class="goodfor">Good for bedtime, story time, and the library</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>A peek at our story list</h3><p>Here are a few of the stories we’re working on. New titles are on the way.</p></div>
+    <div class="cards c2">
+      <div class="card t-coral"><h3>Feelings and friendship</h3><ul class="tick"><li>I Am Already Cool</li><li>The Kindness Club</li><li>Nobody Stands Alone</li><li>Waiting Is Hard</li></ul></div>
+      <div class="card t-teal"><h3>Everyday habits</h3><ul class="tick"><li>Why Do I Have to Go to Bed?</li><li>The Tooth Truth!</li><li>The Magic Words</li></ul></div>
+      <div class="card t-purple"><h3>Science and discovery</h3><ul class="tick"><li>The Science of Things That Move</li><li>Little Architects, Big Buildings</li></ul></div>
+      <div class="card t-orange"><h3>Big dreams</h3><ul class="tick"><li>What Could I Be When I Grow Up?</li><li>The Allowance Adventure</li></ul></div>
+    </div>
+    <div class="subhead"><h3>Why stories work</h3></div>
+    <div class="cards c3">
+      <div class="card t-yellow"><h3>Kids see themselves</h3><p>When the kids in a story feel familiar, children lean in and keep reading.</p></div>
+      <div class="card t-green"><h3>Big feelings get smaller</h3><p>Watching a character work through a tough moment helps kids handle their own.</p></div>
+      <div class="card t-blue"><h3>Learning sticks</h3><p>Facts and lessons tucked into a good story are easier to remember.</p></div>
+    </div>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Hear when new books come out</a></div>
+
+  </div>
+</section>
+
+<!-- Product: videos -->
+<section class="section product s-white" id="videos">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-coral" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg></div>
+      <div>
+        <span class="kicker k-coral">Short video lessons</span>
+        <h2>Quick lessons kids actually want to watch.</h2>
+        <p class="lede">Quick, friendly videos about letters, numbers, animals, science, and getting along with others.</p>
+        <span class="goodfor">Good for little learners and classroom screens</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>What the videos cover</h3></div>
+    <div class="cards c3">
+      <div class="card t-blue"><h3>Letters and sounds</h3><p>Meet a letter, hear its sound, and find it in everyday words.</p></div>
+      <div class="card t-yellow"><h3>Numbers and counting</h3><p>Count, compare, and spot numbers all around the house and neighborhood.</p></div>
+      <div class="card t-green"><h3>Animals</h3><p>From ocean animals to backyard bugs, where they live and what makes them special.</p></div>
+      <div class="card t-purple"><h3>Science</h3><p>Simple answers to big kid questions, like why it rains and how things move.</p></div>
+      <div class="card t-coral"><h3>Getting along</h3><p>Sharing, taking turns, saying sorry, and being a good friend.</p></div>
+      <div class="card t-teal"><h3>Feelings</h3><p>Naming feelings and finding calm ways to handle the big ones.</p></div>
+    </div>
+    <div class="subhead"><h3>How each video works</h3></div>
+    <div class="cards c3">
+      <div class="card t-orange"><h3>Short and sweet</h3><p>Just a few minutes, perfect for little attention spans.</p></div>
+      <div class="card t-blue"><h3>Story first</h3><p>Each lesson starts with a moment kids recognize.</p></div>
+      <div class="card t-green"><h3>Ends with a question</h3><p>A simple question at the end keeps the conversation going after the screen goes off.</p></div>
+    </div>
+    <p class="note">Our first videos are on the way.</p>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Hear when videos are ready</a></div>
+
+  </div>
+</section>
+
+<!-- Product: games -->
+<section class="section product s-white" id="games">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-yellow" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A2350" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div>
+      <div>
+        <span class="kicker k-yellow">Games</span>
+        <h2>Play that builds big skills.</h2>
+        <p class="lede">Fun games, like the Cool Kids Chess Club, where kids practice thinking ahead, staying focused, and solving problems.</p>
+        <span class="goodfor">Good for playing solo or as a family</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>Play now</h3></div>
+    <div class="feature t-yellow">
+      <div><h3>Cool Kids Chess Club</h3><p>Learn chess and play against the Cool Kids, from beginner games all the way up to challenge level. A fun way to practice patience and planning ahead.</p></div>
+      <a class="btn btn-b" href="https://tools.justaskcc.com/chess/">Play Chess Club</a>
+    </div>
+    <div class="subhead"><h3>Coming soon</h3></div>
+    <div class="cards c3">
+      <div class="card t-coral"><h3>Flashcard games</h3><p>Letters, sight words, animals, and more, with shuffling and a little friendly scorekeeping.</p></div>
+      <div class="card t-teal"><h3>Memory match</h3><p>Flip cards to find pairs and give that memory a workout.</p></div>
+      <div class="card t-purple"><h3>Word and number puzzles</h3><p>Quick puzzles that make practice feel like play.</p></div>
+    </div>
+    <div class="subhead"><h3>What kids practice</h3></div>
+    <div class="topics"><span class="b-blue">Thinking ahead</span><span class="b-coral">Focus</span><span class="b-teal">Problem solving</span><span class="b-purple">Patience</span><span class="b-green">Being a good sport</span></div>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Hear when new games come out</a></div>
+
+  </div>
+</section>
+
+<!-- Product: apps -->
+<section class="section product s-white" id="apps">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-teal" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></div>
+      <div>
+        <span class="kicker k-teal">Apps</span>
+        <h2>Helpful tools for everyday kid life.</h2>
+        <p class="lede">Kid friendly tools, like a talk buddy app that helps kids think through friendships, homework, and big feelings.</p>
+        <span class="goodfor">Good for everyday ups and downs</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>Try our apps</h3></div>
+    <div class="feature t-teal">
+      <div><h3>Talk It Out with the Cool Kids</h3><p>Kids can talk with a Cool Kid about friends, homework, and big feelings. It includes a calm down corner and a safety help screen.</p></div>
+      <a class="btn btn-b" href="https://apps.coolkidsuniversity.com/talkitout/">Open Talk It Out</a>
+    </div>
+    <div class="feature t-purple">
+      <div><h3>Learn with Bailey</h3><p>Short lessons where kids earn stars as they go. Progress stays on your device.</p></div>
+      <a class="btn btn-b" href="https://apps.coolkidsuniversity.com/learnwithbailey/">Open Learn with Bailey</a>
+    </div>
+    <div class="subhead"><h3>Good to know</h3></div>
+    <div class="cards c3">
+      <div class="card t-yellow"><h3>No download needed</h3><p>Our apps open right in the web browser on phones, tablets, and computers.</p></div>
+      <div class="card t-coral"><h3>Made for kids</h3><p>Simple screens, big buttons, and friendly guides.</p></div>
+      <div class="card t-green"><h3>More on the way</h3><p>New apps are added as they’re ready.</p></div>
+    </div>
+    <div class="btns pcta"><a class="btn btn-y" href="https://apps.coolkidsuniversity.com/">See all our apps</a></div>
+
+  </div>
+</section>
+
+<!-- Product: heroes -->
+<section class="section product s-white" id="heroes">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-purple" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+      <div>
+        <span class="kicker k-purple">Real life heroes</span>
+        <h2>Meet people who made a difference.</h2>
+        <p class="lede">Short, kid sized stories about inspiring people from all kinds of backgrounds, including leaders, inventors, artists, and everyday changemakers.</p>
+        <span class="goodfor">Good for any day of the year</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>Who kids will meet</h3></div>
+    <div class="cards c3">
+      <div class="card t-blue"><h3>Leaders</h3><p>People who stood up, spoke out, and helped others.</p></div>
+      <div class="card t-teal"><h3>Inventors and scientists</h3><p>Curious minds whose ideas changed how we live.</p></div>
+      <div class="card t-coral"><h3>Artists and musicians</h3><p>Creators who shared their voices through art, music, and words.</p></div>
+      <div class="card t-orange"><h3>Athletes</h3><p>Champions who showed what hard work and practice can do.</p></div>
+      <div class="card t-green"><h3>Everyday changemakers</h3><p>Regular people who made a big difference in their communities.</p></div>
+      <div class="card t-yellow"><h3>Kids like them</h3><p>Young people who proved you don’t have to wait to make a difference.</p></div>
+    </div>
+    <div class="subhead"><h3>What every hero story includes</h3></div>
+    <div class="card t-purple" style="margin-top:20px"><ul class="tick"><li>Who they are and what they’re known for</li><li>Where and when they grew up</li><li>Their story, told in a way kids can follow</li><li>A question to talk about together</li></ul></div>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Hear when new stories are ready</a></div>
+
+  </div>
+</section>
+
+<!-- Product: printables -->
+<section class="section product s-white" id="printables">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-green" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></div>
+      <div>
+        <span class="kicker k-green">Printables</span>
+        <h2>Learning you can hold in your hands.</h2>
+        <p class="lede">Activity pages and workbooks you can print at home or in the classroom.</p>
+        <span class="goodfor">Good for weekends, summer, and quiet time</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>What you’ll find</h3></div>
+    <div class="cards c2">
+      <div class="card t-coral"><h3>Activity pages</h3><p>Coloring, mazes, matching, and drawing prompts.</p></div>
+      <div class="card t-blue"><h3>Letter and number practice</h3><p>Tracing and practice pages for early readers and counters.</p></div>
+      <div class="card t-purple"><h3>Story companions</h3><p>Pages that go along with our books, so kids can keep exploring.</p></div>
+      <div class="card t-orange"><h3>Workbooks</h3><p>Themed packets for school breaks, summer, and rainy days.</p></div>
+    </div>
+    <div class="subhead"><h3>Easy to use</h3></div>
+    <div class="cards c3">
+      <div class="card t-teal"><h3>Print and go</h3><p>Download, print, and you’re ready.</p></div>
+      <div class="card t-yellow"><h3>Simple supplies</h3><p>Crayons, pencils, and maybe some scissors. That’s it.</p></div>
+      <div class="card t-green"><h3>Home or classroom</h3><p>Works for one child or a whole class.</p></div>
+    </div>
+    <p class="note">Our first printables are on the way.</p>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Hear when printables are ready</a></div>
+
+  </div>
+</section>
+
+<!-- Product: classroom -->
+<section class="section product s-white" id="classroom">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-orange" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h6M7 12h4"/></svg></div>
+      <div>
+        <span class="kicker k-orange">Classroom resources</span>
+        <h2>Ready when you are.</h2>
+        <p class="lede">Slideshows, lesson guides, and discussion questions teachers can use right away.</p>
+        <span class="goodfor">Good for teachers, homeschool, and after school</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>What’s included</h3></div>
+    <div class="cards c2">
+      <div class="card t-blue"><h3>Slideshows</h3><p>Colorful lessons you can put up on a classroom screen.</p></div>
+      <div class="card t-coral"><h3>Lesson guides</h3><p>Simple step by step plans, with timing and materials.</p></div>
+      <div class="card t-teal"><h3>Discussion questions</h3><p>Questions that get kids talking, thinking, and listening to each other.</p></div>
+      <div class="card t-purple"><h3>Activities</h3><p>Hands on ideas to wrap up each lesson.</p></div>
+    </div>
+    <div class="subhead"><h3>Made for real classrooms</h3></div>
+    <div class="cards c3">
+      <div class="card t-yellow"><h3>Flexible</h3><p>Use with the whole class, small groups, or one on one.</p></div>
+      <div class="card t-green"><h3>Inclusive</h3><p>Stories and examples that reflect all kinds of kids and families.</p></div>
+      <div class="card t-orange"><h3>Whole child</h3><p>Feelings and friendship skills built into reading, math, and science.</p></div>
+    </div>
+    <p class="note">Teachers, we’d love to know what would help your classroom most.</p>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Tell us what you need</a></div>
+
+  </div>
+</section>
+
+<!-- Product: conversation -->
+<section class="section product s-white" id="conversation">
+  <div class="wrap">
+    <a class="backlink" href="#offerings">← Everything we make</a>
+    <div class="phead">
+      <div class="num b-red" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+      <div>
+        <span class="kicker k-red">Conversation starters</span>
+        <h2>Easy ways to get kids talking.</h2>
+        <p class="lede">Simple questions that help grownups talk with kids about feelings, kindness, and what they’re learning.</p>
+        <span class="goodfor">Good for parents, grandparents, and caregivers</span>
+      </div>
+    </div>
+    <div class="subhead"><h3>Try these tonight</h3><p>Pick one or two at dinner, in the car, or at bedtime.</p></div>
+    <div class="cards c2">
+      <div class="card t-coral"><h3>About feelings</h3><ul class="tick"><li>What made you smile today?</li><li>Was anything hard today?</li><li>When did you feel proud of yourself?</li></ul></div>
+      <div class="card t-blue"><h3>About friends</h3><ul class="tick"><li>Who did you play with today?</li><li>How can you tell when a friend is sad?</li><li>What makes someone a good friend?</li></ul></div>
+      <div class="card t-green"><h3>About kindness</h3><ul class="tick"><li>What’s one kind thing you saw today?</li><li>How could we help someone this week?</li><li>How do you feel when someone is kind to you?</li></ul></div>
+      <div class="card t-purple"><h3>About learning</h3><ul class="tick"><li>What’s something new you learned?</li><li>What do you want to know more about?</li><li>If you could teach me something, what would it be?</li></ul></div>
+    </div>
+    <div class="subhead"><h3>A few tips</h3></div>
+    <div class="cards c3">
+      <div class="card t-yellow"><h3>Listen more</h3><p>Let them finish, even if it takes a minute.</p></div>
+      <div class="card t-teal"><h3>Share your answer too</h3><p>Kids open up more when you go first.</p></div>
+      <div class="card t-orange"><h3>Keep it light</h3><p>No wrong answers. Just curiosity.</p></div>
+    </div>
+    <div class="btns pcta"><a class="btn btn-y" href="#connect">Get more conversation starters</a></div>
+
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -489,9 +782,12 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
   var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   var pages=[].slice.call(document.querySelectorAll('main>section'));
-  var names={home:'Home',who:'About',benefits:'How we help',offerings:'What we make',approach:'How it works',mission:'Why we do this',values:'What we care about',why:'How it started',world:'Learning is everywhere',vision:'Where we’re headed',access:'For every kid',connect:'Get in touch'};
+  var names={home:'Home',who:'About',benefits:'How we help',offerings:'What we make',approach:'How it works',mission:'Why we do this',values:'What we care about',why:'How it started',world:'Learning is everywhere',vision:'Where we’re headed',access:'For every kid',connect:'Get in touch',storybooks:'Storybooks',videos:'Short video lessons',games:'Games',apps:'Apps',heroes:'Real life heroes',printables:'Printables',classroom:'Classroom resources',conversation:'Conversation starters'};
+  var prod=['storybooks','videos','games','apps','heroes','printables','classroom','conversation'];
   pages.forEach(function(p,i){
-    var nx=pages[i+1]; if(!nx) return;
+    var nx; var k=prod.indexOf(p.id);
+    if(k>-1){nx=document.getElementById(prod[k+1]||'offerings');}
+    else{nx=pages[i+1]; if(!nx||prod.indexOf(nx.id)>-1) return;}
     var d=document.createElement('div'); d.className='next';
     d.innerHTML='<a href="#'+nx.id+'"><span>Next</span> '+names[nx.id]+' →</a>';
     (p.querySelector('.wrap')||p).appendChild(d);
