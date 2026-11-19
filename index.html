@@ -116,6 +116,9 @@ header{position:sticky;top:0;z-index:100;background:rgba(26,35,80,.97);backdrop-
 .s-teal .card h3,.s-coral .card h3,.s-navy .card h3,.s-purple .card h3{color:var(--navy)}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.story{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.story-pic img{display:block;width:100%;max-width:420px;margin:0 auto;border-radius:28px;border:6px solid var(--yellow);box-shadow:0 14px 34px rgba(0,0,0,.3)}
+@media (max-width:820px){.story{grid-template-columns:1fr}.story-pic img{max-width:320px}}
 @media (max-width:860px){.split{grid-template-columns:1fr;gap:30px}}
 .big-quote{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;line-height:1.25;color:var(--navy)}
 
@@ -431,15 +434,14 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
 
 <!-- How it started -->
 <section class="section s-navy" id="why">
-  <div class="wrap split">
+  <div class="wrap split story">
+    <div class="story-pic"><img src="images/cici.jpg" alt="CiCi Caver as a Cool Kids University character, smiling with her chin on her hand"></div>
     <div>
       <span class="kicker" style="background:var(--yellow);color:var(--navy)">How it started</span>
-      <h2>Kids should be able to see themselves in their stories.</h2>
-      <p class="lede">What kids read and watch shapes how they see themselves, how they see others, and what they believe they can become.</p>
-    </div>
-    <div>
-      <p>Cool Kids University started with a simple wish: a learning world that looks more like the kids and families we know. One where different cultures, personalities, and abilities are just a normal part of the story.</p>
-      <p>When kids feel like they belong, they’re more willing to try, ask questions, and dream big.</p>
+      <h2>“Hey, Miss CiCi!”</h2>
+      <p>I’d hear that when I showed up at my children’s schools. I’m CiCi Caver, a mom of four and the founder of Cool Kids University. I volunteered, hung out with the kids at recess, and for a short while, I was a substitute teacher. Somewhere along the way, I became the “fun mom.”</p>
+      <p>At recess, I got to know the kids a little differently. I heard their jokes, listened to their stories, and noticed things about their personalities that were easy to miss in a classroom. Those were the kids I wanted to see in books and games.</p>
+      <p>Cool Kids University started with my children, Chloe and Carter. The characters are loosely based on them and the kids I’ve met over the years. The teachers in our stories are inspired by real educators I’ve met, too. My hope is that every child can find someone here who reminds them of a friend, a favorite teacher, or even themselves.</p>
     </div>
   </div>
 </section>
