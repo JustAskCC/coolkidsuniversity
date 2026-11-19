@@ -148,7 +148,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(26,35,80,.97);backdrop-
 .friend:nth-child(8n+7){border-bottom:7px solid var(--orange)}.friend:nth-child(8n+8){border-bottom:7px solid var(--red)}
 
 .place{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
-.place img{width:100%;aspect-ratio:4/3;max-height:260px;object-fit:cover;object-position:top}
+.place img{display:block;width:100%;max-width:240px;aspect-ratio:1/1;object-fit:cover;margin:22px auto 0;border-radius:22px;box-shadow:0 6px 18px rgba(31,36,64,.15)}
+.place.fam img{outline:6px solid #FFE3C7}.place.com img{outline:6px solid #D5F2DA}.place.sch img{outline:6px solid #E7DDFB}
 .place .txt{padding:22px 22px 26px}
 .place h3{font-size:1.35rem}
 .place p{margin:0;color:var(--muted)}
