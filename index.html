@@ -89,6 +89,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(26,35,80,.97);backdrop-
 .cards{display:grid;gap:22px;margin-top:34px}
 .c3{grid-template-columns:repeat(3,1fr)}
 .c2{grid-template-columns:repeat(2,1fr)}
+.gb{align-items:start;margin-top:34px}.gb .card p{margin:12px 0}.gb .btns{margin-top:18px}
 .c4{grid-template-columns:repeat(4,1fr)}
 @media (max-width:900px){.c3,.c4{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.c3,.c2,.c4{grid-template-columns:1fr}}
@@ -283,6 +284,7 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
           <a href="#vision">Where we’re headed</a>
           <a href="#access">For every kid</a>
         </div></details></li>
+        <li><a href="#giveback">GiveBack</a></li>
         <li><a href="#connect" class="navcta">Get in touch</a></li>
       </ul>
     </nav>
@@ -494,6 +496,38 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
       <p>We’re focused on bringing fun stories, digital tools, and creative activities to the kids who need them most.</p>
       <p>As we grow, we’d love to team up with schools, libraries, community groups, and supporters who care about the same things we do.</p>
       <p style="font-weight:700;color:var(--navy)">And we want to do it in a way that respects what each community already brings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CKU GiveBack -->
+<section class="section s-white" id="giveback">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker" style="background:var(--green)">CKU GiveBack</span>
+      <h2>Every child deserves to feel comfortable walking into school.</h2>
+      <p class="lede">Through CKU GiveBack, Cool Kids University partners with nonprofits on issues that affect young people in their everyday lives. Right now, we’re partnering with Chief Leader Life to provide hygiene kits to youth in underserved communities.</p>
+    </div>
+    <div class="cards c2 gb">
+      <div class="card t-green">
+        <h3>What you can give</h3>
+        <p>Through this partnership, we welcome donations of new, unopened personal care items such as:</p>
+        <ul class="tick">
+          <li>Toothbrushes and toothpaste</li>
+          <li>Soap, body wash, and deodorant</li>
+          <li>Shampoo and conditioner for a variety of hair textures</li>
+          <li>Combs and hairbrushes</li>
+          <li>Pads and panty liners</li>
+          <li>New washcloths</li>
+        </ul>
+        <p>You can contribute a single item or organize a collection with your school, workplace, or community group. Contact us for current needs and drop off details.</p>
+        <div class="btns"><a class="btn btn-y" href="mailto:team@justaskcc.com?subject=CKU%20GiveBack%3A%20I%27d%20like%20to%20donate%20supplies">Donate Supplies</a></div>
+      </div>
+      <div class="card t-purple">
+        <h3>Partner with CKU GiveBack</h3>
+        <p>Does your nonprofit serve young people? Tell us about a need you’re seeing in your community and how we might work together.</p>
+        <div class="btns"><a class="btn btn-c" href="mailto:team@justaskcc.com?subject=CKU%20GiveBack%3A%20Partnership%20inquiry">Become a Partner</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -780,7 +814,7 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
     <div class="name">Cool Kids University</div>
     <p class="tl">Where stories spark learning.</p>
     <p class="copy" style="margin-top:10px"><a href="mailto:team@justaskcc.com" style="color:#C9D0F5">team@justaskcc.com</a></p>
-    <nav class="footnav" aria-label="All pages"><a href="#home">Home</a><a href="#who">About</a><a href="#benefits">How we help</a><a href="#offerings">What we make</a><a href="#approach">How it works</a><a href="#connect">Get in touch</a></nav>
+    <nav class="footnav" aria-label="All pages"><a href="#home">Home</a><a href="#who">About</a><a href="#benefits">How we help</a><a href="#offerings">What we make</a><a href="#approach">How it works</a><a href="#giveback">CKU GiveBack</a><a href="#connect">Get in touch</a></nav>
     <p class="copy">© 2026 Cool Kids University</p>
   </div>
 </footer>
@@ -791,7 +825,7 @@ footer .copy{font-size:.85rem;margin-top:18px;color:#8F98C8}
   var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   var pages=[].slice.call(document.querySelectorAll('main>section'));
-  var names={home:'Home',who:'About',benefits:'How we help',offerings:'What we make',approach:'How it works',mission:'Why we do this',values:'What we care about',why:'How it started',world:'Learning is everywhere',vision:'Where we’re headed',access:'For every kid',connect:'Get in touch',storybooks:'Storybooks',videos:'Short video lessons',games:'Games',apps:'Apps',heroes:'Real life heroes',printables:'Printables',classroom:'Classroom resources',conversation:'Conversation starters'};
+  var names={home:'Home',who:'About',benefits:'How we help',offerings:'What we make',approach:'How it works',mission:'Why we do this',values:'What we care about',why:'How it started',world:'Learning is everywhere',vision:'Where we’re headed',access:'For every kid',giveback:'CKU GiveBack',connect:'Get in touch',storybooks:'Storybooks',videos:'Short video lessons',games:'Games',apps:'Apps',heroes:'Real life heroes',printables:'Printables',classroom:'Classroom resources',conversation:'Conversation starters'};
   var prod=['storybooks','videos','games','apps','heroes','printables','classroom','conversation'];
   pages.forEach(function(p,i){
     var nx; var k=prod.indexOf(p.id);
